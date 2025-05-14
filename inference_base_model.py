@@ -29,5 +29,5 @@ Explain the difference between renewable and non-renewable energy sources.
 ### Response:
 """
 
-print("=== BEFORE PEFT Fine-Tuning ===")
+print("=== BEFORE Fine-Tuning ===")
 print(generate(model, prompt))
