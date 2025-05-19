@@ -11,6 +11,7 @@ tokenizer.pad_token = tokenizer.eos_token
 
 # Choose device manually
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+device = torch.device("mps") if torch.backends.mps.is_available() else "cpu"
 
 # Load fully fine-tuned model
 model = AutoModelForCausalLM.from_pretrained(model_path)

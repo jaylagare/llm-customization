@@ -43,7 +43,7 @@ tokenized_dataset = dataset.map(tokenize, batched=True, remove_columns=dataset.c
 # === Set up Trainer ===
 training_args = TrainingArguments(
     output_dir="./tinyllama-full",
-    per_device_train_batch_size=4,
+    per_device_train_batch_size=2, # this works for RTX 4090 24GB
     gradient_accumulation_steps=4,
     learning_rate=5e-5,
     num_train_epochs=2,
